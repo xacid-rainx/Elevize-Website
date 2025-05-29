@@ -318,33 +318,45 @@
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 <!-- Contact Form -->
-<div class="bg-black p-8 rounded-lg">
-<h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
-<form>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-<div>
-<label for="name" class="block text-gray-400 mb-2">Name</label>
-<input type="text" id="name" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Your name">
-</div>
-<div>
-<label for="email" class="block text-gray-400 mb-2">Email</label>
-<input type="email" id="email" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Your email">
-</div>
-</div>
-<div class="mb-6">
-<label for="subject" class="block text-gray-400 mb-2">Subject</label>
-<input type="text" id="subject" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Subject">
-</div>
-<div class="mb-6">
-<label for="message" class="block text-gray-400 mb-2">Message</label>
-<textarea id="message" rows="5" class="w-full bg-gray-900 border-none text-white p-3 rounded resize-none" placeholder="Your message"></textarea>
-</div>
-<div class="flex items-center mb-6">
-<input type="checkbox" id="consent" class="custom-checkbox mr-3">
-<label for="consent" class="text-gray-400 text-sm">I agree to the processing of my personal data in accordance with the Privacy Policy</label>
-</div>
-<button type="submit" class="bg-gradient-to-r from-primary to-purple-400 text-white px-8 py-3 !rounded-button whitespace-nowrap">Send Message</button>
-</form>
+<div class="bg-black p-8 rounded-lg" id="contact-container">
+  <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+  <form id="contact-form" action="https://formspree.io/f/mwpoggwj" method="POST">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label for="name" class="block text-gray-400 mb-2">Name</label>
+        <input type="text" id="name" name="name" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Your name" required>
+      </div>
+      <div>
+        <label for="email" class="block text-gray-400 mb-2">Email</label>
+        <input type="email" id="email" name="email" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Your email" required>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label for="subject" class="block text-gray-400 mb-2">Subject</label>
+      <input type="text" id="subject" name="subject" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Subject">
+    </div>
+    <div class="mb-6">
+      <label for="message" class="block text-gray-400 mb-2">Message</label>
+      <textarea id="message" name="message" rows="5" class="w-full bg-gray-900 border-none text-white p-3 rounded resize-none" placeholder="Your message" required></textarea>
+    </div>
+    <div class="flex items-center mb-6">
+      <input type="checkbox" id="consent" name="consent" class="custom-checkbox mr-3" required>
+      <label for="consent" class="text-gray-400 text-sm">I agree to the processing of my personal data in accordance with the Privacy Policy</label>
+    </div>
+
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit" class="bg-gradient-to-r from-primary to-purple-400 text-white px-8 py-3 !rounded-button whitespace-nowrap">Send Message</button>
+  </form>
+
+  <!-- Hidden Thank You Message -->
+  <div id="thank-you-message" class="hidden text-center mt-6">
+    <div class="hexagon bg-primary w-16 h-16 flex items-center justify-center mx-auto mb-4">
+      <i class="ri-mail-send-line ri-xl text-white"></i>
+    </div>
+    <h4 class="text-2xl font-bold mb-2">Thank You!</h4>
+    <p class="text-gray-400">Your message has been sent. We’ll get back to you soon.</p>
+  </div>
 </div>
 <!-- Contact Information -->
 <div>
@@ -499,6 +511,34 @@
 </div>
 </footer>
 <script src="script.js"></script>
+  <script>
+  const form = document.getElementById('contact-form');
+  const thankYou = document.getElementById('thank-you-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYou.classList.remove('hidden');
+      } else {
+        alert('Oops! There was a problem submitting your form.');
+      }
+    } catch (error) {
+      alert('Oops! Something went wrong.');
+    }
+  });
+</script>
 </body>
 
 </html>
