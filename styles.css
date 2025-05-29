@@ -86,3 +86,6 @@ input:focus, textarea:focus {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+button.bg-transparent.border.border-white\/30.hover\:border-white\/60.text-white.px-6.py-3.\!rounded-button.flex.items-center.gap-2.whitespace-nowrap.transition-all {
+    background-color: #9747FF var(--tw-gradient-from-position);
+}
