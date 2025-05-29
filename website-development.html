@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Development - Elevize</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#9747FF', secondary: '#000000' },
+          borderRadius: {
+            'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px',
+            'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px',
+            'full': '9999px', 'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+  <header class="fixed w-full bg-black bg-opacity-95 z-50">
+<div class="container mx-auto px-6 py-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+<i class="ri-rocket-line ri-lg text-white"></i>
+</div>
+<span class="text-2xl font-bold">Elevize</span>
+</div>
+<nav class="hidden md:flex space-x-8 items-center">
+<a href="#home" class="text-white hover:text-primary transition-colors duration-300">Home</a>
+<a href="#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
+<a href="#portfolio" class="text-white hover:text-primary transition-colors duration-300">Portfolio</a>
+<a href="#about" class="text-white hover:text-primary transition-colors duration-300">About</a>
+<a href="#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
+<button class="bg-gradient-to-r from-primary to-purple-400 text-white px-6 py-2 !rounded-button whitespace-nowrap">Get Started</button>
+</nav>
+<div class="md:hidden w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-2x text-white"></i>
+</div>
+</div>
+</div>
+</header>
+
+  <section
+      class="relative h-[500px] overflow-hidden flex items-center justify-center"
+    >
+      <div
+        class="absolute inset-0 bg-cover bg-center code-overlay"
+        style="background-image: url('https://readdy.ai/api/search-image?query=dark%2520background%2520with%2520programming%2520code%2520snippets%2520in%2520various%2520colors%2520like%2520purple%2520blue%2520and%2520green%2520on%2520a%2520black%2520screen%2520modern%2520tech%2520aesthetic%2520with%2520syntax%2520highlighting%2520visible%2520code%2520structure%2520programming%2520language%2520elements&width=1280&height=720&seq=1&orientation=landscape');"
+      ></div>
+
+      <div class="container mx-auto px-4 relative z-10 w-full">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="flex items-center justify-center mb-4 fade-in">
+            <div
+              class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center"
+            >
+              <i class="ri-code-s-slash-line text-primary ri-xl"></i>
+            </div>
+          </div>
+
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 glow fade-in delay-1"
+          >
+            Website Development
+          </h1>
+
+          <p
+            class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed fade-in delay-2"
+          >
+            Unlock your business's full potential with a custom website built
+            for growth in Belize and beyond.
+          </p>
+
+          <div class="mt-8 flex gap-4 justify-center fade-in delay-3">
+            <button
+              class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button flex items-center gap-2 whitespace-nowrap transition-all shadow-lg shadow-primary/20"
+            >
+              <span>Start Your Project</span>
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-rocket-line"></i>
+              </div>
+            </button>
+
+            <button
+              class="bg-transparent border border-white/30 hover:border-white/60 text-white px-6 py-3 !rounded-button flex items-center gap-2 whitespace-nowrap transition-all"
+            >
+              <span>Learn More</span>
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-arrow-down-line"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator"
+      >
+        <div
+          class="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center pt-2"
+        >
+          <div class="w-1.5 h-3 bg-white/70 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-950">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3 fade-in">
+                <div
+                  class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-global-line text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold">Digital-First Approach</h3>
+              </div>
+
+              <p class="text-gray-300 leading-relaxed fade-in delay-1">
+                In today's digital-first world, having a professional website is
+                no longer optional—it's essential. A strong online presence
+                opens the door to massive opportunity.
+              </p>
+
+              <div class="flex items-center gap-3 fade-in delay-2">
+                <div
+                  class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center"
+                >
+                  <i class="ri-building-line text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold">Local Business Focus</h3>
+              </div>
+
+              <p class="text-gray-300 leading-relaxed fade-in delay-3">
+                In Belize, where local businesses are rapidly evolving and
+                tourism-driven industries flourish, we create websites that
+                capture the unique essence of your brand.
+              </p>
+            </div>
+
+            <div
+              class="rounded-xl overflow-hidden shadow-2xl shadow-primary/5 float"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%2520web%2520development%2520team%2520working%2520together%2520in%2520modern%2520office%2520with%2520large%2520windows%2520natural%2520light%2520multiple%2520monitors%2520showing%2520code%2520and%2520design%2520elements%2520collaborative%2520atmosphere%2520diverse%2520team%2520focused%2520on%2520project&width=600&height=400&seq=2&orientation=landscape"
+                alt="Web Development Team"
+                class="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="gradient-divider my-16"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-primary/30 transition-all group"
+            >
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all"
+              >
+                <i class="ri-palette-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Custom Design</h3>
+              <p class="text-gray-400">
+                Tailored website designs that reflect your brand identity and
+                engage your target audience effectively.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-primary/30 transition-all group"
+            >
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all"
+              >
+                <i class="ri-code-box-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Expert Development</h3>
+              <p class="text-gray-400">
+                Clean, efficient code that ensures your website loads quickly
+                and functions flawlessly across all devices.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-primary/30 transition-all group"
+            >
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all"
+              >
+                <i class="ri-line-chart-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Growth Strategy</h3>
+              <p class="text-gray-400">
+                SEO-optimized websites with analytics integration to help your
+                business reach its full online potential.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center">
+            <button
+              class="bg-primary hover:bg-primary/90 text-white px-8 py-4 !rounded-button flex items-center gap-2 mx-auto whitespace-nowrap transition-all shadow-lg shadow-primary/20"
+            >
+              <span>Schedule a Consultation</span>
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-calendar-line"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-black relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 text-primary text-opacity-20 text-4xl"
+        >
+          &lt;div&gt;
+        </div>
+        <div
+          class="absolute top-40 right-20 text-primary text-opacity-20 text-3xl"
+        >
+          &lt;/&gt;
+        </div>
+        <div
+          class="absolute bottom-20 left-1/4 text-primary text-opacity-20 text-5xl"
+        >
+          { }
+        </div>
+        <div
+          class="absolute bottom-40 right-1/3 text-primary text-opacity-20 text-4xl"
+        >
+          &lt;/div&gt;
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 glow">
+            Ready to Elevate Your Online Presence?
+          </h2>
+
+          <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+            Join the growing number of businesses in Belize that are thriving
+            online with our custom website development services.
+          </p>
+
+          <div class="bg-gray-900/50 p-8 rounded-xl border border-gray-800">
+            <div class="flex flex-col md:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="flex-1 bg-black/50 border border-gray-700 focus:border-primary outline-none px-4 py-3 rounded text-white placeholder-gray-500"
+              />
+
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button flex items-center justify-center gap-2 whitespace-nowrap transition-all shadow-lg shadow-primary/20"
+              >
+                <span>Get a Free Quote</span>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-send-plane-line"></i>
+                </div>
+              </button>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">
+              We respect your privacy. Your information will never be shared.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <footer class="bg-black pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Company Info -->
+<div>
+<div class="flex items-center mb-6">
+<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+<i class="ri-rocket-line ri-lg text-white"></i>
+</div>
+<span class="text-2xl font-bold">Elevize</span>
+</div>
+<p class="text-gray-400 mb-6">Elevating your digital presence with custom web solutions and design services.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Services</a></li>
+<li><a href="#portfolio" class="text-gray-400 hover:text-primary transition-colors duration-300">Portfolio</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-primary transition-colors duration-300">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h4 class="text-lg font-bold mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Website Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Web Support & Maintenance</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Graphic Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">UI/UX Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Brand Identity</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="text-lg font-bold mb-6">Subscribe</h4>
+<p class="text-gray-400 mb-6">Stay updated with our latest news and offers.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email" class="flex-grow bg-gray-900 border-none text-white p-3 rounded-l">
+<button type="submit" class="bg-primary text-white px-4 py-3 rounded-r whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+<p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 mb-4 md:mb-0">© 2025 Elevize. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-primary transition-colors duration-300">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-primary transition-colors duration-300">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-primary transition-colors duration-300">Sitemap</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
