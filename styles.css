@@ -1,0 +1,88 @@
+/* Custom CSS */
+:where([class^="ri-"])::before { content: "\f3c2"; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.rocket-animation {
+  animation: rocket 8s ease-in-out infinite;
+}
+
+@keyframes rocket {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Shapes */
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Form Styles */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #9747FF;
+}
+
+/* Progress Line */
+.progress-line {
+  height: 2px;
+  background: linear-gradient(90deg, #9747FF 0%, #CB6CE6 100%);
+}
+
+/* Hover Effects */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(151, 71, 255, 0.2);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay {
+  background: rgba(151, 71, 255, 0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #9747FF;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #9747FF;
+}
+
+.custom-checkbox:checked::before {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
