@@ -340,6 +340,8 @@
       <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-2xl" id="contact-container">
         <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
         <form id="contact-form" action="https://formspree.io/f/mwpoggwj" method="POST">
+          
+          <!-- Name & Email Row -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
               <label for="name" class="block text-gray-400 mb-2 text-sm">Full Name *</label>
@@ -350,58 +352,63 @@
               <input type="email" id="email" name="email" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="Your email" required>
             </div>
           </div>
+          
+          <!-- Phone & Service Row -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
- <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-  <div>
-    <label for="phone" class="block text-gray-400 mb-2 text-sm">Phone / WhatsApp</label>
-    <input type="tel" id="phone" name="phone" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="+(501) 600-0000">
-  </div>
-  <div>
-    <label for="service" class="block text-gray-400 mb-2 text-sm">Service Needed *</label>
-    <select id="service" name="service" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" required>
-      <option value="" disabled selected>Select a Service</option>
-      <option value="Website Development">Website Development & E-Commerce</option>
-      <option value="Web Support">Web Support & Maintenance</option>
-      <option value="Graphic Design">Graphic Design & Branding</option>
-      <option value="IT & Tech Services">PC Repair / Networking / Security Cameras</option>
-      <option value="Other">Other Inquiry</option>
-    </select>
-  </div>
-</div>
+            <div>
+              <label for="phone" class="block text-gray-400 mb-2 text-sm">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="+(501) 600-0000">
+            </div>
+            <div>
+              <label for="service" class="block text-gray-400 mb-2 text-sm">Service Needed *</label>
+              <select id="service" name="service" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="Website Development">Website Development & E-Commerce</option>
+                <option value="Web Support">Web Support & Maintenance</option>
+                <option value="Graphic Design">Graphic Design & Branding</option>
+                <option value="IT & Tech Services">PC Repair / Networking / Security Cameras</option>
+                <option value="Other">Other Inquiry</option>
+              </select>
+            </div>
+          </div>
 
-<!-- Dynamic Package Sub-Option (Hidden by default) -->
-<div id="package-container" class="mb-6 hidden">
-  <label for="package" class="block text-gray-400 mb-2 text-sm">Select Package Tier *</label>
-  <select id="package" name="package_tier" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none">
-    <option value="" disabled selected>Select a Package / Retainer</option>
-    
-    <!-- 1. Website Development Options -->
-    <optgroup label="Website Development Packages" id="optgroup-web" class="hidden">
-      <option value="Starter Plan ($650 BZD)">Starter Plan - Single Page / Landing ($650 BZD)</option>
-      <option value="Business Plan (Starting $1,350 BZD)">Business Plan - Multi-Page Site (Starting $1,350 BZD)</option>
-      <option value="E-Commerce / Custom (Starting $2,500 BZD)">E-Commerce / Custom Portals (Starting $2,500 BZD)</option>
-    </optgroup>
+          <!-- Dynamic Package Sub-Option (Hidden by default) -->
+          <div id="package-container" class="mb-6 hidden">
+            <label for="package" class="block text-gray-400 mb-2 text-sm">Select Package Tier *</label>
+            <select id="package" name="package_tier" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none">
+              <option value="" disabled selected>Select a Package / Retainer</option>
+              
+              <!-- 1. Website Development Options -->
+              <optgroup label="Website Development Packages" id="optgroup-web" class="hidden">
+                <option value="Starter Plan ($650 BZD)">Starter Plan - Single Page / Landing ($650 BZD)</option>
+                <option value="Business Plan (Starting $1,350 BZD)">Business Plan - Multi-Page Site (Starting $1,350 BZD)</option>
+                <option value="E-Commerce / Custom (Starting $2,500 BZD)">E-Commerce / Custom Portals (Starting $2,500 BZD)</option>
+              </optgroup>
 
-    <!-- 2. Web Support Options -->
-    <optgroup label="Web Support & Maintenance Packages" id="optgroup-support" class="hidden">
-      <option value="Essential Care ($49 BZD/mo)">Essential Care - Monthly Retainer ($49 BZD/mo)</option>
-      <option value="Pro Business Care ($99 BZD/mo)">Pro Business Care - Monthly Retainer ($99 BZD/mo)</option>
-      <option value="Site Refresh & Tune-Up">Site Refresh & Tune-Up - One-Time</option>
-      <option value="Prepaid Task Block ($150 BZD)">Prepaid Task Block (5 Hours - $150 BZD)</option>
-    </optgroup>
+              <!-- 2. Web Support Options -->
+              <optgroup label="Web Support & Maintenance Packages" id="optgroup-support" class="hidden">
+                <option value="Essential Care ($49 BZD/mo)">Essential Care - Monthly Retainer ($49 BZD/mo)</option>
+                <option value="Pro Business Care ($99 BZD/mo)">Pro Business Care - Monthly Retainer ($99 BZD/mo)</option>
+                <option value="Site Refresh & Tune-Up">Site Refresh & Tune-Up - One-Time</option>
+                <option value="Prepaid Task Block ($150 BZD)">Prepaid Task Block (5 Hours - $150 BZD)</option>
+              </optgroup>
 
-    <!-- 3. Graphic Design Options -->
-    <optgroup label="Graphic Design & Branding Packages" id="optgroup-design" class="hidden">
-      <option value="Logo Starter ($175 BZD)">Logo & Identity Starter ($175 BZD)</option>
-      <option value="Brand & Social Suite ($350 BZD)">Brand & Social Suite ($350 BZD)</option>
-      <option value="Custom Graphic Retainer">Custom Graphic Retainer / Quote</option>
-    </optgroup>
-  </select>
-</div>
+              <!-- 3. Graphic Design Options -->
+              <optgroup label="Graphic Design & Branding Packages" id="optgroup-design" class="hidden">
+                <option value="Logo Starter ($175 BZD)">Logo & Identity Starter ($175 BZD)</option>
+                <option value="Brand & Social Suite ($350 BZD)">Brand & Social Suite ($350 BZD)</option>
+                <option value="Custom Graphic Retainer">Custom Graphic Retainer / Quote</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Message Textarea -->
           <div class="mb-6">
             <label for="message" class="block text-gray-400 mb-2 text-sm">Message *</label>
             <textarea id="message" name="message" rows="5" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg resize-none focus:border-primary focus:outline-none" placeholder="Tell us about your project or tech issue..." required></textarea>
           </div>
+          
+          <!-- Consent Checkbox -->
           <div class="flex items-center mb-6">
             <input type="checkbox" id="consent" name="consent" class="custom-checkbox mr-3" required>
             <label for="consent" class="text-gray-400 text-xs">I agree to the processing of my personal data in accordance with the Privacy Policy</label>
@@ -424,7 +431,8 @@
           <p class="text-gray-400">Your message has been sent. We’ll get back to you soon.</p>
         </div>
       </div>
-      <!-- Contact Information -->
+
+      <!-- Contact Information Column -->
       <div>
         <div class="bg-gray-900 p-8 rounded-2xl mb-8 border border-gray-800 shadow-2xl">
           <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
