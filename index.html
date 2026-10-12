@@ -351,22 +351,33 @@
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label for="phone" class="block text-gray-400 mb-2 text-sm">Phone / WhatsApp</label>
-              <input type="tel" id="phone" name="phone" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="+(501) 600-0000">
-            </div>
-            <div>
-              <label for="service" class="block text-gray-400 mb-2 text-sm">Service Needed *</label>
-              <select id="service" name="service" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" required>
-                <option value="" disabled selected>Select a Service</option>
-                <option value="Website Development">Website Development & E-Commerce</option>
-                <option value="Web Support">Web Support & Maintenance</option>
-                <option value="Graphic Design">Graphic Design & Branding</option>
-                <option value="IT & Tech Services">PC Repair / Networking / Security Cameras</option>
-                <option value="Other">Other Inquiry</option>
-              </select>
-            </div>
-          </div>
+  <div>
+    <label for="phone" class="block text-gray-400 mb-2 text-sm">Phone / WhatsApp</label>
+    <input type="tel" id="phone" name="phone" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="+(501) 600-0000">
+  </div>
+  <div>
+    <label for="service" class="block text-gray-400 mb-2 text-sm">Service Needed *</label>
+    <select id="service" name="service" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" required>
+      <option value="" disabled selected>Select a Service</option>
+      <option value="Website Development">Website Development & E-Commerce</option>
+      <option value="Web Support">Web Support & Maintenance</option>
+      <option value="Graphic Design">Graphic Design & Branding</option>
+      <option value="IT & Tech Services">PC Repair / Networking / Security Cameras</option>
+      <option value="Other">Other Inquiry</option>
+    </select>
+  </div>
+</div>
+
+<!-- Dynamic Package Sub-Option (Hidden by default) -->
+<div id="package-container" class="mb-6 hidden">
+  <label for="package" class="block text-gray-400 mb-2 text-sm">Select Package Tier *</label>
+  <select id="package" name="package_tier" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none">
+    <option value="" disabled selected>Select a Web Package</option>
+    <option value="Starter Plan ($650 BZD)">Starter Plan - Single Page / Landing ($650 BZD)</option>
+    <option value="Business Plan (Starting $1,350 BZD)">Business Plan - Multi-Page Site (Starting $1,350 BZD)</option>
+    <option value="E-Commerce / Custom (Starting $2,500 BZD)">E-Commerce / Custom Portals (Starting $2,500 BZD)</option>
+  </select>
+</div>
           <div class="mb-6">
             <label for="message" class="block text-gray-400 mb-2 text-sm">Message *</label>
             <textarea id="message" name="message" rows="5" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg resize-none focus:border-primary focus:outline-none" placeholder="Tell us about your project or tech issue..." required></textarea>
@@ -565,6 +576,47 @@
       alert('Oops! Something went wrong.');
     }
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const serviceSelect = document.getElementById('service');
+  const packageContainer = document.getElementById('package-container');
+  const packageSelect = document.getElementById('package');
+
+  function handlePackageVisibility() {
+    if (serviceSelect.value === 'Website Development') {
+      packageContainer.classList.remove('hidden');
+      packageSelect.setAttribute('required', 'required');
+    } else {
+      packageContainer.classList.add('hidden');
+      packageSelect.removeAttribute('required');
+      packageSelect.value = ''; // Reset selection when hidden
+    }
+  }
+
+  if (serviceSelect) {
+    // 1. Listen for manual changes in the dropdown
+    serviceSelect.addEventListener('change', handlePackageVisibility);
+
+    // 2. Check URL parameters coming from other pages (e.g. ?service=Website+Development&package=Starter)
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    const packageParam = urlParams.get('package');
+
+    if (serviceParam) {
+      serviceSelect.value = serviceParam;
+      handlePackageVisibility(); // Trigger check to show package dropdown
+    }
+
+    if (packageParam && packageSelect) {
+      for (let option of packageSelect.options) {
+        if (option.value.toLowerCase().includes(packageParam.toLowerCase())) {
+          packageSelect.value = option.value;
+          break;
+        }
+      }
+    }
+  }
+});
 </script>
 </body>
 </html>
