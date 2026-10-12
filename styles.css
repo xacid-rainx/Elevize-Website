@@ -1,72 +1,90 @@
-/* Custom CSS */
-:where([class^="ri-"])::before { content: "\f3c2"; }
+/* ==========================================
+   1. Variables & Base Styles
+   ========================================== */
+:root {
+  --primary: #9747FF;
+  --primary-rgb: 151, 71, 255;
+  --gradient-secondary: #CB6CE6;
+}
+
+:where([class^="ri-"])::before { 
+  content: "\f3c2"; 
+}
 
 body {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
 
-/* Animations */
-.floating {
-  animation: float 6s ease-in-out infinite;
+/* ==========================================
+   2. Animations
+   ========================================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+@keyframes rocket {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
 }
 
 .rocket-animation {
   animation: rocket 8s ease-in-out infinite;
 }
 
-@keyframes rocket {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-30px); }
-  100% { transform: translateY(0px); }
-}
-
-/* Shapes */
+/* ==========================================
+   3. Shapes & Components
+   ========================================== */
 .hexagon {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 /* Form Styles */
 input:focus, textarea:focus {
   outline: none;
-  border-color: #9747FF;
+  border-color: var(--primary);
 }
 
 /* Progress Line */
 .progress-line {
   height: 2px;
-  background: linear-gradient(90deg, #9747FF 0%, #CB6CE6 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--gradient-secondary) 100%);
 }
 
-/* Hover Effects */
+/* ==========================================
+   4. Cards & Hover Effects
+   ========================================== */
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(151, 71, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(var(--primary-rgb), 0.2);
+}
+
+.portfolio-overlay {
+  background: rgba(var(--primary-rgb), 0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
 
-.portfolio-overlay {
-  background: rgba(151, 71, 255, 0.9);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-/* Custom Checkbox */
+/* ==========================================
+   5. Custom Form Elements
+   ========================================== */
 .custom-checkbox {
   appearance: none;
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #9747FF;
+  border: 2px solid var(--primary);
   border-radius: 4px;
   outline: none;
   cursor: pointer;
@@ -74,7 +92,7 @@ input:focus, textarea:focus {
 }
 
 .custom-checkbox:checked {
-  background-color: #9747FF;
+  background-color: var(--primary);
 }
 
 .custom-checkbox:checked::before {
@@ -86,6 +104,8 @@ input:focus, textarea:focus {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-button.bg-transparent.border.border-white\/30.hover\:border-white\/60.text-white.px-6.py-3.\!rounded-button.flex.items-center.gap-2.whitespace-nowrap.transition-all {
-    background-color: #9747FF var(--tw-gradient-from-position);
+
+/* Cleaned Button Override (Replaced the massive Tailwind class chain) */
+.hero-custom-btn {
+  background-color: var(--primary);
 }

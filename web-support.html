@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Support & Maintenance - Elevize</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#9747FF', secondary: '#000000' },
+          borderRadius: {
+            'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px',
+            'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px',
+            'full': '9999px', 'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-black bg-opacity-95 z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+            <i class="ri-rocket-line ri-lg text-white"></i>
+          </div>
+          <span class="text-2xl font-bold">Elevize</span>
+        </div>
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="index.html#home" class="text-white hover:text-primary transition-colors duration-300">Home</a>
+          <a href="index.html#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
+          <a href="index.html#portfolio" class="text-white hover:text-primary transition-colors duration-300">Portfolio</a>
+          <a href="about-us.html" class="text-white hover:text-primary transition-colors duration-300">About</a>
+          <a href="index.html#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
+          <a href="index.html#contact" class="bg-gradient-to-r from-primary to-purple-400 text-white px-6 py-2 !rounded-button whitespace-nowrap">Get Support</a>
+        </nav>
+        <div class="md:hidden w-8 h-8 flex items-center justify-center">
+          <i class="ri-menu-line ri-2x text-white"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-[500px] overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 bg-cover bg-center code-overlay" style="background-image: url('https://t3.ftcdn.net/jpg/12/16/93/76/240_F_1216937659_CCXFPZ0zQQ4qPfEpICW1mPMEIOAVvhyj.jpg');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-75"></div>
+
+    <div class="container mx-auto px-4 relative z-10 w-full">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="flex items-center justify-center mb-4 fade-in">
+          <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+            <i class="ri-customer-service-2-line text-primary ri-xl"></i>
+          </div>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 glow fade-in delay-1">
+          Web Support & Maintenance
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed fade-in delay-2">
+          Choose between ongoing monthly care plans or flexible one-time task packages tailored for businesses in Belize.
+        </p>
+
+        <div class="mt-8 flex gap-4 justify-center fade-in delay-3">
+          <a href="#plans" class="inline-block transition-colors duration-300">
+            <button class="bg-transparent border border-white/30 hover:border-white/60 text-white px-6 py-3 !rounded-button flex items-center gap-2 whitespace-nowrap transition-all">
+              <span>View Support Options</span>
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-arrow-down-line"></i>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="py-16 bg-gray-950">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Flexible Support Tailored For You</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto mb-12">Whether you need consistent monthly security monitoring or just a one-off batch of updates, we make keeping your website updated simple and stress-free.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Plans Section -->
+  <section id="plans" class="py-20 bg-black">
+    <div class="container mx-auto px-6">
+      
+      <!-- PART 1: MONTHLY PLANS -->
+      <div class="text-center mb-12">
+        <span class="text-primary uppercase tracking-widest text-xs font-bold">Continuous Care</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-3">Monthly Support Retainers</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Peace of mind with ongoing security patches, backups, and priority turnarounds.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
+        <!-- Essential Support -->
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 flex flex-col justify-between hover:border-primary/50 transition-all">
+          <div>
+            <span class="text-sm text-primary font-semibold">Monthly Plan</span>
+            <h3 class="text-2xl font-bold mt-2 mb-2">Essential Care</h3>
+            <div class="text-3xl font-extrabold text-primary mb-4">$49 <span class="text-sm font-normal text-gray-400">BZD/mo</span></div>
+            <p class="text-gray-400 text-sm mb-6">Great for small business sites needing baseline security, weekly backups, and minor updates.</p>
+            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Weekly Cloud Backups</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> 24/7 Uptime Monitoring</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Monthly Security Checks</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Up to 1 Hour of Content Edits / mo</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Standard Email Support</li>
+            </ul>
+          </div>
+          <a href="index.html#contact" class="bg-black hover:bg-primary text-white text-center py-3 rounded-button font-medium transition-colors border border-gray-700 hover:border-primary">Choose Essential Monthly</a>
+        </div>
+
+        <!-- Pro Support (Highlighted) -->
+        <div class="bg-gray-900 p-8 rounded-2xl border-2 border-primary relative flex flex-col justify-between shadow-xl shadow-primary/10">
+          <div class="absolute -top-3 right-6 bg-primary text-white text-xs px-3 py-1 rounded-full font-semibold">Most Popular</div>
+          <div>
+            <span class="text-sm text-primary font-semibold">Monthly Plan</span>
+            <h3 class="text-2xl font-bold mt-2 mb-2">Pro Business Care</h3>
+            <div class="text-3xl font-extrabold text-primary mb-4">$99 <span class="text-sm font-normal text-gray-400">BZD/mo</span></div>
+            <p class="text-gray-400 text-sm mb-6">For active company sites requiring regular updates, speed tuning, and fast communication.</p>
+            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Daily Automated Backups</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Continuous Speed & Security Audits</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Up to 3 Hours of Content Edits / mo</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Priority WhatsApp & Email Support</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Monthly Performance Review</li>
+            </ul>
+          </div>
+          <a href="index.html#contact" class="bg-gradient-to-r from-primary to-purple-400 text-white text-center py-3 rounded-button font-medium transition-opacity hover:opacity-90">Choose Pro Monthly</a>
+        </div>
+      </div>
+
+      <!-- PART 2: ONE-TIME TASK PACKAGES -->
+      <div class="text-center mb-12">
+        <span class="text-primary uppercase tracking-widest text-xs font-bold">No Monthly Commitment</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-3">One-Time Task Packages</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Pay once for specific website improvements, tune-ups, or a block of hours without any recurring subscription.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Quick Fix / Tune-Up Pack -->
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 flex flex-col justify-between hover:border-primary/50 transition-all">
+          <div>
+            <span class="text-sm text-primary font-semibold">One-Time Package</span>
+            <h3 class="text-2xl font-bold mt-2 mb-2">Site Refresh & Tune-Up</h3>
+            <div class="text-2xl font-extrabold text-primary mb-4">Request a Quote</div>
+            <p class="text-gray-400 text-sm mb-6">A one-off comprehensive checkup to optimize your existing website's performance and fix lingering bugs.</p>
+            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Speed & Image Optimization</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Mobile Responsiveness Audit</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Fix Up to 3 Reported Bugs/Errors</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Basic On-Page SEO Check</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Completed in 2-3 Business Days</li>
+            </ul>
+          </div>
+          <a href="index.html#contact" class="bg-black hover:bg-primary text-white text-center py-3 rounded-button font-medium transition-colors border border-gray-700 hover:border-primary">Request Custom Quote</a>
+        </div>
+
+        <!-- Task Hour Block -->
+        <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 flex flex-col justify-between hover:border-primary/50 transition-all">
+          <div>
+            <span class="text-sm text-primary font-semibold">One-Time Package</span>
+            <h3 class="text-2xl font-bold mt-2 mb-2">Prepaid Task Block (5 Hours)</h3>
+            <div class="text-3xl font-extrabold text-primary mb-4">$150 <span class="text-sm font-normal text-gray-400">BZD flat rate</span></div>
+            <p class="text-gray-400 text-sm mb-6">Need a few specific updates made right now? Purchase a 5-hour task block for any changes you need.</p>
+            <ul class="space-y-3 text-sm text-gray-300 mb-8">
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> 5 Dedicated Developer Hours</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Text, Banner, & Image Updates</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Add New Section or Landing Page</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Zero Monthly Subscription Required</li>
+              <li class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-primary"></i> Hours Never Expire</li>
+            </ul>
+          </div>
+          <a href="index.html#contact" class="bg-black hover:bg-primary text-white text-center py-3 rounded-button font-medium transition-colors border border-gray-700 hover:border-primary">Buy 5-Hour Task Block</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-950">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <p class="text-gray-400">Everything you need to know about our support options.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="bg-black rounded-lg border border-gray-800 overflow-hidden">
+          <button class="w-full p-6 text-left font-semibold text-lg flex justify-between items-center focus:outline-none faq-btn">
+            <span>What is the difference between monthly plans and one-time task packages?</span>
+            <i class="ri-add-line text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+            Monthly plans provide continuous, automated protection (daily/weekly backups, uptime tracking, security scans) along with ongoing minor monthly edits. One-time packages are single purchases for specific one-off updates, fixes, or tune-ups with no recurring subscription.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-black rounded-lg border border-gray-800 overflow-hidden">
+          <button class="w-full p-6 text-left font-semibold text-lg flex justify-between items-center focus:outline-none faq-btn">
+            <span>Can I switch from a one-time task pack to a monthly plan later?</span>
+            <i class="ri-add-line text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+            Absolutely! Many local clients start with a one-time tune-up or task block to clean up their site, and then transition to a monthly care plan once they want ongoing security and regular updates.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-black rounded-lg border border-gray-800 overflow-hidden">
+          <button class="w-full p-6 text-left font-semibold text-lg flex justify-between items-center focus:outline-none faq-btn">
+            <span>How do we communicate regarding task requests?</span>
+            <i class="ri-add-line text-primary transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+            We keep communication straightforward and fast via email or WhatsApp, making it easy to send over text changes, images, or updates whenever you need them.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black pt-16 pb-8 border-t border-gray-900">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+              <i class="ri-rocket-line ri-lg text-white"></i>
+            </div>
+            <span class="text-2xl font-bold">Elevize</span>
+          </div>
+          <p class="text-gray-400 mb-6">Elevating your digital presence with custom web solutions and design services.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html#home" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+            <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Services</a></li>
+            <li><a href="index.html#portfolio" class="text-gray-400 hover:text-primary transition-colors duration-300">Portfolio</a></li>
+            <li><a href="index.html#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm">
+          <li><a href="website-development.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Website Development</a></li>
+          <li><a href="web-support.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Web Support & Maintenance</a></li>
+          <li><a href="graphic-design.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Graphic Design</a></li>
+          <li><a href="tech-service.html" class="text-gray-400 hover:text-primary transition-colors duration-300">PC Repair & Networking</a></li>
+        </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">Contact</h4>
+          <p class="text-gray-400 mb-2">San Antonio Village, Cayo, Belize</p>
+          <p class="text-gray-400">+(501) 615-8929</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        © 2025 Elevize. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- FAQ Accordion Script -->
+  <script>
+    document.querySelectorAll('.faq-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        if (content.classList.contains('hidden')) {
+          icon.className = 'ri-add-line text-primary transition-transform duration-300';
+        } else {
+          icon.className = 'ri-subtract-line text-primary transition-transform duration-300';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

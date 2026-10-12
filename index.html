@@ -26,24 +26,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white selection:bg-primary selection:text-white">
 <!-- Header -->
-<header class="fixed w-full bg-black bg-opacity-95 z-50">
+<header class="fixed w-full bg-black bg-opacity-95 z-50 border-b border-gray-900">
 <div class="container mx-auto px-6 py-4">
 <div class="flex justify-between items-center">
 <div class="flex items-center">
-<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3 shadow-lg shadow-primary/30">
 <i class="ri-rocket-line ri-lg text-white"></i>
 </div>
-<span class="text-2xl font-bold">Elevize</span>
+<span class="text-2xl font-bold tracking-tight">Elevize</span>
 </div>
 <nav class="hidden md:flex space-x-8 items-center">
 <a href="#home" class="text-white hover:text-primary transition-colors duration-300">Home</a>
 <a href="#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
 <a href="#portfolio" class="text-white hover:text-primary transition-colors duration-300">Portfolio</a>
-<a href="#about" class="text-white hover:text-primary transition-colors duration-300">About</a>
+<a href="about-us.html" class="text-white hover:text-primary transition-colors duration-300">About</a>
 <a href="#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
-<button class="bg-gradient-to-r from-primary to-purple-400 text-white px-6 py-2 !rounded-button whitespace-nowrap">Get Started</button>
+<a href="#contact" class="bg-gradient-to-r from-primary to-purple-500 text-white px-6 py-2.5 !rounded-button whitespace-nowrap font-medium shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+<span>Get Started</span>
+<i class="ri-arrow-right-line transform transition-transform duration-300 group-hover:translate-x-1.5"></i>
+</a>
 </nav>
 <div class="md:hidden w-8 h-8 flex items-center justify-center">
 <i class="ri-menu-line ri-2x text-white"></i>
@@ -51,21 +54,26 @@
 </div>
 </div>
 </header>
+
 <!-- Hero Section -->
-<section id="home" class="min-h-screen relative overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=A%20modern%20digital%20workspace%20with%20abstract%20purple%20and%20dark%20elements%2C%20futuristic%20technology%20theme%20with%20subtle%20geometric%20shapes%20floating%20in%20space%2C%20gradient%20purple%20to%20black%20background%2C%20minimalist%20design%20aesthetic%2C%20professional%20and%20elegant%20atmosphere&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
-<div class="absolute inset-0 bg-black bg-opacity-70"></div>
-<div class="container mx-auto px-6 pt-32 pb-20 relative z-10 flex flex-col md:flex-row items-center justify-between min-h-screen">
+<section id="home" class="min-h-screen relative overflow-hidden flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=A%20modern%20digital%20workspace%20with%20abstract%20purple%20and%20dark%20elements%2C%20futuristic%20technology%20theme%20with%20subtle%20geometric%20shapes%20floating%20in%20space%2C%20gradient%20purple%20to%20black%20background%2C%20minimalist%20design%20aesthetic%2C%20professional%20and%20elegant%20atmosphere&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-black bg-opacity-75"></div>
+<div class="container mx-auto px-6 pt-32 pb-20 relative z-10 flex flex-col md:flex-row items-center justify-between">
 <div class="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
-<h1 class="text-4xl md:text-6xl font-bold mb-6">Your Vision. <span class="text-primary">Elevated.</span></h1>
-<p class="text-lg md:text-xl mb-8 text-gray-300 max-w-lg">We transform your ideas into stunning digital experiences. Websites, support, and design solutions that elevate your brand to new heights.</p>
+<span class="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-xs font-semibold mb-4 tracking-wider uppercase border border-primary/30">Premier Tech & Web Agency in Belize</span>
+<h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Your Vision. <span class="text-primary glow">Elevated.</span></h1>
+<p class="text-lg md:text-xl mb-8 text-gray-300 max-w-lg leading-relaxed">Custom websites, secure e-commerce payment gateways (Atlantic Bank), professional branding, and on-site IT solutions.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-<button class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 !rounded-button whitespace-nowrap">View Our Work</button>
-<button class="bg-transparent border-2 border-primary text-white hover:bg-primary hover:bg-opacity-10 px-8 py-3 !rounded-button whitespace-nowrap">Free Consultation</button>
+<a href="#portfolio" class="bg-gradient-to-r from-primary to-purple-500 hover:opacity-95 text-white px-8 py-3.5 !rounded-button whitespace-nowrap text-center font-semibold shadow-xl shadow-primary/30 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2 group">
+<span>View Our Work</span>
+<i class="ri-arrow-down-line transform transition-transform duration-300 group-hover:translate-y-1.5"></i>
+</a>
+<a href="#contact" class="bg-transparent border-2 border-primary text-white hover:bg-primary/10 px-8 py-3.5 !rounded-button whitespace-nowrap text-center font-semibold hover:scale-105 transition-all duration-300">Free Consultation</a>
 </div>
 </div>
 <div class="w-full md:w-1/2 flex justify-center">
 <div class="rocket-animation">
-<div class="hexagon bg-primary w-64 h-64 flex items-center justify-center">
+<div class="hexagon bg-primary w-64 h-64 flex items-center justify-center shadow-2xl shadow-primary/40">
 <i class="ri-rocket-line ri-10x text-white"></i>
 </div>
 </div>
@@ -77,377 +85,396 @@
 <div class="absolute bottom-1/4 left-1/3 w-16 h-16 hexagon bg-primary bg-opacity-40 floating" style="animation-delay: 2s;"></div>
 <div class="absolute bottom-1/3 right-1/3 w-10 h-10 hexagon bg-primary bg-opacity-25 floating" style="animation-delay: 3s;"></div>
 </section>
+
 <!-- Services Section -->
-<section id="services" class="py-20 bg-gray-950">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-<p class="text-gray-400 max-w-2xl mx-auto">We offer comprehensive digital solutions to help your business thrive in the online world.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Service 1 -->
-<div class="service-card bg-black p-8 rounded-lg border border-gray-800 transition-all duration-500">
-<div class="hexagon bg-primary w-16 h-16 flex items-center justify-center mb-6 mx-auto">
-<i class="ri-code-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-4 text-center">Website Development</h3>
-<p class="text-gray-400 mb-6 text-center">Custom-built responsive websites that perfectly align with your brand and business goals.</p>
-<div class="text-center">
-<button class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-colors duration-300 whitespace-nowrap">Learn More</button>
-</div>
-</div>
-<!-- Service 2 -->
-<div class="service-card bg-black p-8 rounded-lg border border-gray-800 transition-all duration-500">
-<div class="hexagon bg-primary w-16 h-16 flex items-center justify-center mb-6 mx-auto">
-<i class="ri-customer-service-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-4 text-center">Web Support</h3>
-<p class="text-gray-400 mb-6 text-center">Ongoing maintenance, updates, and technical support to keep your digital presence running smoothly.</p>
-<div class="text-center">
-<button class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-colors duration-300 whitespace-nowrap">Learn More</button>
-</div>
-</div>
-<!-- Service 3 -->
-<div class="service-card bg-black p-8 rounded-lg border border-gray-800 transition-all duration-500">
-<div class="hexagon bg-primary w-16 h-16 flex items-center justify-center mb-6 mx-auto">
-<i class="ri-palette-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-4 text-center">Graphic Design</h3>
-<p class="text-gray-400 mb-6 text-center">Eye-catching visuals that communicate your brand message and captivate your audience.</p>
-<div class="text-center">
-<button class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-colors duration-300 whitespace-nowrap">Learn More</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Portfolio Section -->
-<section id="portfolio" class="py-20 bg-black">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
-<p class="text-gray-400 max-w-2xl mx-auto">Explore our recent projects and see how we've helped businesses elevate their digital presence.</p>
-</div>
-<!-- Filter Buttons -->
-<div class="flex justify-center mb-12">
-<div class="inline-flex bg-gray-900 p-1 rounded-full">
-<button class="px-6 py-2 rounded-full bg-primary text-white whitespace-nowrap">All</button>
-<button class="px-6 py-2 rounded-full text-white hover:bg-gray-800 whitespace-nowrap">Websites</button>
-<button class="px-6 py-2 rounded-full text-white hover:bg-gray-800 whitespace-nowrap">Graphics</button>
-<button class="px-6 py-2 rounded-full text-white hover:bg-gray-800 whitespace-nowrap">Branding</button>
-</div>
-</div>
-<!-- Portfolio Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Portfolio Item 1 -->
-<div class="portfolio-item relative rounded-lg overflow-hidden group">
-<img src="https://readdy.ai/api/search-image?query=A%20modern%2C%20clean%20e-commerce%20website%20design%20with%20purple%20accents%2C%20displayed%20on%20a%20laptop%20screen%2C%20professional%20product%20photography%2C%20minimalist%20layout%20with%20clear%20typography%2C%20high-end%20fashion%20or%20tech%20products%2C%20dark%20mode%20interface%20with%20purple%20highlights&width=600&height=400&seq=2&orientation=landscape" alt="E-commerce Website" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6">
-<h3 class="text-xl font-bold mb-2">Luxury E-commerce</h3>
-<p class="text-sm text-center mb-4">Website Development</p>
-<a href="https://readdy.ai/home/535d10fa-777f-413e-a840-92398775444f/1a7be643-180c-426c-a6c3-f073864711fe" data-readdy="true">
-<button class="bg-white text-primary px-4 py-2 !rounded-button whitespace-nowrap">View Project</button>
-</a>
-</div>
-</div>
-<!-- Portfolio Item 2 -->
-<div class="portfolio-item relative rounded-lg overflow-hidden group">
-<img src="https://readdy.ai/api/search-image?query=A%20sleek%20mobile%20app%20interface%20design%20with%20purple%20gradient%20elements%2C%20displayed%20on%20a%20smartphone%2C%20modern%20UI%2FUX%20design%20with%20clean%20navigation%2C%20dark%20mode%20interface%20with%20purple%20accent%20colors%2C%20financial%20or%20productivity%20app%20concept&width=600&height=400&seq=3&orientation=landscape" alt="Mobile App" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6">
-<h3 class="text-xl font-bold mb-2">FinTech Mobile App</h3>
-<p class="text-sm text-center mb-4">UI/UX Design</p>
-<a href="https://readdy.ai/home/535d10fa-777f-413e-a840-92398775444f/1a7be643-180c-426c-a6c3-f073864711fe" data-readdy="true">
-<button class="bg-white text-primary px-4 py-2 !rounded-button whitespace-nowrap">View Project</button>
-</a>
-</div>
-</div>
-<!-- Portfolio Item 3 -->
-<div class="portfolio-item relative rounded-lg overflow-hidden group">
-<img src="https://readdy.ai/api/search-image?query=A%20professional%20brand%20identity%20design%20with%20logo%2C%20business%20cards%2C%20and%20stationery%20displayed%20on%20a%20dark%20background%2C%20purple%20color%20scheme%2C%20modern%20and%20minimalist%20design%20aesthetic%2C%20corporate%20branding%20materials%20for%20a%20tech%20company&width=600&height=400&seq=4&orientation=landscape" alt="Brand Identity" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6">
-<h3 class="text-xl font-bold mb-2">TechCore Branding</h3>
-<p class="text-sm text-center mb-4">Brand Identity</p>
-<a href="https://readdy.ai/home/535d10fa-777f-413e-a840-92398775444f/1a7be643-180c-426c-a6c3-f073864711fe" data-readdy="true">
-<button class="bg-white text-primary px-4 py-2 !rounded-button whitespace-nowrap">View Project</button>
-</a>
-</div>
-</div>
-<!-- Portfolio Item 4 -->
-<div class="portfolio-item relative rounded-lg overflow-hidden group">
-<img src="https://readdy.ai/api/search-image?query=A%20responsive%20website%20design%20for%20a%20creative%20agency%20displayed%20on%20multiple%20devices%20%28desktop%2C%20tablet%2C%20mobile%29%2C%20dark%20theme%20with%20purple%20accents%2C%20portfolio-style%20layout%20with%20large%20imagery%2C%20professional%20and%20modern%20web%20design&width=600&height=400&seq=5&orientation=landscape" alt="Responsive Website" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6">
-<h3 class="text-xl font-bold mb-2">Creative Agency Site</h3>
-<p class="text-sm text-center mb-4">Web Development</p>
-<a href="https://readdy.ai/home/535d10fa-777f-413e-a840-92398775444f/1a7be643-180c-426c-a6c3-f073864711fe" data-readdy="true">
-<button class="bg-white text-primary px-4 py-2 !rounded-button whitespace-nowrap">View Project</button>
-</a>
-</div>
-</div>
-<!-- Portfolio Item 5 -->
-<div class="portfolio-item relative rounded-lg overflow-hidden group">
-<img src="https://readdy.ai/api/search-image?query=A%20collection%20of%20social%20media%20graphics%20and%20posts%20with%20cohesive%20purple%20and%20dark%20color%20scheme%2C%20modern%20marketing%20materials%20for%20digital%20campaigns%2C%20professional%20content%20marketing%20design%2C%20Instagram%20and%20Facebook%20post%20templates&width=600&height=400&seq=6&orientation=landscape" alt="Social Media Graphics" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6">
-<h3 class="text-xl font-bold mb-2">Social Media Campaign</h3>
-<p class="text-sm text-center mb-4">Graphic Design</p>
-<a href="https://readdy.ai/home/535d10fa-777f-413e-a840-92398775444f/1a7be643-180c-426c-a6c3-f073864711fe" data-readdy="true">
-<button class="bg-white text-primary px-4 py-2 !rounded-button whitespace-nowrap">View Project</button>
-</a>
-</div>
-</div>
-<!-- Portfolio Item 6 -->
-<div class="portfolio-item relative rounded-lg overflow-hidden group">
-<img src="https://readdy.ai/api/search-image?query=A%20modern%20SaaS%20dashboard%20interface%20with%20data%20visualization%2C%20dark%20mode%20UI%20with%20purple%20accent%20colors%2C%20admin%20panel%20design%20with%20charts%20and%20statistics%2C%20professional%20web%20application%20interface&width=600&height=400&seq=7&orientation=landscape" alt="SaaS Dashboard" class="w-full h-64 object-cover object-top">
-<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6">
-<h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
-<p class="text-sm text-center mb-4">Web Application</p>
-<a href="https://readdy.ai/home/535d10fa-777f-413e-a840-92398775444f/1a7be643-180c-426c-a6c3-f073864711fe" data-readdy="true">
-<button class="bg-white text-primary px-4 py-2 !rounded-button whitespace-nowrap">View Project</button>
-</a>
-</div>
-</div>
-</div>
-<div class="text-center mt-12">
-<button class="bg-transparent border-2 border-primary text-white hover:bg-primary hover:bg-opacity-10 px-8 py-3 !rounded-button whitespace-nowrap">View All Projects</button>
-</div>
-</div>
-</section>
-<!-- Process Section -->
-<section id="process" class="py-20 bg-gray-950">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
-<p class="text-gray-400 max-w-2xl mx-auto">We follow a proven methodology to ensure your project is delivered successfully.</p>
-</div>
-<div class="relative">
-<!-- Progress Line -->
-<div class="hidden md:block absolute top-1/2 left-0 right-0 progress-line"></div>
-<!-- Process Steps -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-<!-- Step 1 -->
-<div class="flex flex-col items-center text-center">
-<div class="hexagon bg-primary w-20 h-20 flex items-center justify-center mb-6 z-10">
-<i class="ri-search-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-3">Discovery</h3>
-<p class="text-gray-400">We learn about your business, goals, and vision to create a strategic plan.</p>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col items-center text-center">
-<div class="hexagon bg-primary w-20 h-20 flex items-center justify-center mb-6 z-10">
-<i class="ri-pencil-ruler-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-3">Design</h3>
-<p class="text-gray-400">We create wireframes and visual designs that align with your brand identity.</p>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col items-center text-center">
-<div class="hexagon bg-primary w-20 h-20 flex items-center justify-center mb-6 z-10">
-<i class="ri-code-box-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-3">Development</h3>
-<p class="text-gray-400">We build your solution using the latest technologies and best practices.</p>
-</div>
-<!-- Step 4 -->
-<div class="flex flex-col items-center text-center">
-<div class="hexagon bg-primary w-20 h-20 flex items-center justify-center mb-6 z-10">
-<i class="ri-rocket-line ri-2x text-white"></i>
-</div>
-<h3 class="text-xl font-bold mb-3">Delivery</h3>
-<p class="text-gray-400">We launch your project and provide ongoing support to ensure success.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-20 bg-black">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
-<p class="text-gray-400 max-w-2xl mx-auto">Hear what our clients have to say about working with us.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Testimonial 1 -->
-<div class="bg-gray-900 p-8 rounded-lg">
-<div class="flex items-center mb-6">
-<div class="w-12 h-12 flex items-center justify-center">
-<i class="ri-double-quotes-l ri-2x text-primary"></i>
-</div>
-</div>
-<p class="text-gray-300 mb-6">"Elevize transformed our outdated website into a modern, functional platform that perfectly represents our brand. Their team was professional, responsive, and delivered beyond our expectations."</p>
-<div>
-<h4 class="font-bold">Emily Richardson</h4>
-<p class="text-gray-400 text-sm">Marketing Director, NexTech Solutions</p>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="bg-gray-900 p-8 rounded-lg">
-<div class="flex items-center mb-6">
-<div class="w-12 h-12 flex items-center justify-center">
-<i class="ri-double-quotes-l ri-2x text-primary"></i>
-</div>
-</div>
-<p class="text-gray-300 mb-6">"Working with Elevize on our brand identity was a game-changer. They captured the essence of our company and created a cohesive visual language that resonates with our audience."</p>
-<div>
-<h4 class="font-bold">Michael Chen</h4>
-<p class="text-gray-400 text-sm">Founder, Apex Innovations</p>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="bg-gray-900 p-8 rounded-lg">
-<div class="flex items-center mb-6">
-<div class="w-12 h-12 flex items-center justify-center">
-<i class="ri-double-quotes-l ri-2x text-primary"></i>
-</div>
-</div>
-<p class="text-gray-300 mb-6">"The ongoing web support from Elevize has been invaluable. They're responsive, proactive, and always available to help with any issues or updates we need. Highly recommended!"</p>
-<div>
-<h4 class="font-bold">Sophia Martinez</h4>
-<p class="text-gray-400 text-sm">Operations Manager, Bloom Retail</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-gray-950">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-<p class="text-gray-400 max-w-2xl mx-auto">Ready to elevate your digital presence? Contact us today for a free consultation.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<!-- Contact Form -->
-<div class="bg-black p-8 rounded-lg" id="contact-container">
-  <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
-  <form id="contact-form" action="https://formspree.io/f/mwpoggwj" method="POST">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <div>
-        <label for="name" class="block text-gray-400 mb-2">Name</label>
-        <input type="text" id="name" name="name" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Your name" required>
+<section id="services" class="py-20 bg-gray-950 relative overflow-hidden">
+  <!-- Subtle Ambient Purple Glow Backdrop -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <span class="text-primary uppercase tracking-widest text-xs font-bold">What We Do</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Our Services</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive digital and on-site technical solutions designed to help your business thrive.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Service 1: Website Development -->
+      <div class="service-card bg-black p-8 rounded-xl border border-gray-800 hover:border-primary hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group shadow-xl">
+        <div>
+          <div class="hexagon bg-primary/20 w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+            <i class="ri-code-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-center">Website Development</h3>
+          <p class="text-gray-400 mb-6 text-center text-sm">Custom responsive websites and e-commerce stores with local bank card integrations.</p>
+        </div>
+        <div class="text-center">
+          <a href="website-development.html" class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center gap-2 font-medium group/btn">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-s-line transform transition-transform duration-300 group-hover/btn:translate-x-1.5"></i>
+          </a>
+        </div>
       </div>
-      <div>
-        <label for="email" class="block text-gray-400 mb-2">Email</label>
-        <input type="email" id="email" name="email" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Your email" required>
+
+      <!-- Service 2: Web Support -->
+      <div class="service-card bg-black p-8 rounded-xl border border-gray-800 hover:border-primary hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group shadow-xl">
+        <div>
+          <div class="hexagon bg-primary/20 w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+            <i class="ri-customer-service-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-center">Web Support</h3>
+          <p class="text-gray-400 mb-6 text-center text-sm">Monthly care plans and one-time task packages to keep your site secure and updated.</p>
+        </div>
+        <div class="text-center">
+          <a href="web-support.html" class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center gap-2 font-medium group/btn">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-s-line transform transition-transform duration-300 group-hover/btn:translate-x-1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 3: Graphic Design -->
+      <div class="service-card bg-black p-8 rounded-xl border border-gray-800 hover:border-primary hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group shadow-xl">
+        <div>
+          <div class="hexagon bg-primary/20 w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+            <i class="ri-palette-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-center">Graphic Design</h3>
+          <p class="text-gray-400 mb-6 text-center text-sm">Certified branding, logos, and social media kits crafted with professional Adobe tools.</p>
+        </div>
+        <div class="text-center">
+          <a href="graphic-design.html" class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center gap-2 font-medium group/btn">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-s-line transform transition-transform duration-300 group-hover/btn:translate-x-1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 4: IT & Tech Services (Linked to tech-service.html) -->
+      <div class="service-card bg-black p-8 rounded-xl border border-gray-800 hover:border-primary hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group shadow-xl">
+        <div>
+          <div class="hexagon bg-primary/20 w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+            <i class="ri-tools-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-center">IT & Tech Services</h3>
+          <p class="text-gray-400 mb-6 text-center text-sm">PC repair, home & business security camera setup, and custom network cable crimping.</p>
+        </div>
+        <div class="text-center">
+          <a href="tech-service.html" class="text-primary hover:text-white hover:bg-primary px-6 py-2 border border-primary !rounded-button transition-all duration-300 whitespace-nowrap inline-flex items-center justify-center gap-2 font-medium group/btn">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-s-line transform transition-transform duration-300 group-hover/btn:translate-x-1.5"></i>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="mb-6">
-      <label for="subject" class="block text-gray-400 mb-2">Subject</label>
-      <input type="text" id="subject" name="subject" class="w-full bg-gray-900 border-none text-white p-3 rounded" placeholder="Subject">
-    </div>
-    <div class="mb-6">
-      <label for="message" class="block text-gray-400 mb-2">Message</label>
-      <textarea id="message" name="message" rows="5" class="w-full bg-gray-900 border-none text-white p-3 rounded resize-none" placeholder="Your message" required></textarea>
-    </div>
-    <div class="flex items-center mb-6">
-      <input type="checkbox" id="consent" name="consent" class="custom-checkbox mr-3" required>
-      <label for="consent" class="text-gray-400 text-sm">I agree to the processing of my personal data in accordance with the Privacy Policy</label>
-    </div>
-
-    <input type="text" name="_gotcha" style="display:none">
-
-    <button type="submit" class="bg-gradient-to-r from-primary to-purple-400 text-white px-8 py-3 !rounded-button whitespace-nowrap">Send Message</button>
-  </form>
-
-  <!-- Hidden Thank You Message -->
-  <div id="thank-you-message" class="hidden text-center mt-6">
-    <div class="hexagon bg-primary w-16 h-16 flex items-center justify-center mx-auto mb-4">
-      <i class="ri-mail-send-line ri-xl text-white"></i>
-    </div>
-    <h4 class="text-2xl font-bold mb-2">Thank You!</h4>
-    <p class="text-gray-400">Your message has been sent. We’ll get back to you soon.</p>
   </div>
-</div>
-<!-- Contact Information -->
-<div>
-<div class="bg-black p-8 rounded-lg mb-8">
-<h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-<div class="space-y-6">
-<div class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center mr-4">
-<i class="ri-map-pin-line ri-lg text-primary"></i>
-</div>
-<div>
-<h4 class="font-bold mb-1">Address</h4>
-<p class="text-gray-400">San Antonio Village, Cayo, Belize</p>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 shadow-2xl">
+<div class="w-full md:w-1/3 flex justify-center">
+<div class="hexagon bg-primary/20 w-48 h-48 flex items-center justify-center border-2 border-primary shadow-lg shadow-primary/20">
+<i class="ri-user-star-line ri-5x text-primary"></i>
 </div>
 </div>
-<div class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center mr-4">
-<i class="ri-mail-line ri-lg text-primary"></i>
-</div>
-<div>
-<h4 class="font-bold mb-1">Email</h4>
-<p class="text-gray-400">t_randy23@yahoo.com</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center mr-4">
-<i class="ri-phone-line ri-lg text-primary"></i>
-</div>
-<div>
-<h4 class="font-bold mb-1">Phone</h4>
-<p class="text-gray-400">+(501)615-8929</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center mr-4">
-<i class="ri-time-line ri-lg text-primary"></i>
-</div>
-<div>
-<h4 class="font-bold mb-1">Working Hours</h4>
-<p class="text-gray-400">Monday - Friday: 9AM - 6PM</p>
-</div>
-</div>
-</div>
-<div class="mt-8">
-<h4 class="font-bold mb-4">Follow Us</h4>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
-<i class="ri-facebook-fill ri-lg text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
-<i class="ri-twitter-x-fill ri-lg text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
-<i class="ri-instagram-fill ri-lg text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
-<i class="ri-linkedin-fill ri-lg text-white"></i>
-</a>
-</div>
-</div>
-</div>
-<!-- Map -->
-<div class="bg-black rounded-lg overflow-hidden h-64"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d566.9377826010805!2d-89.02336867449124!3d17.078150182377694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5e68b67cf3692d%3A0x17adaa3eb6906146!2sSan%20Antonio%20Community%20Center!5e0!3m2!1sen!2sbz!4v1748536013524!5m2!1sen!2sbz" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="w-full md:w-2/3 space-y-4">
+<span class="text-primary uppercase tracking-widest text-xs font-bold">Meet Your Developer</span>
+<h2 class="text-2xl md:text-3xl font-bold">Certified IT Professional & Designer</h2>
+<p class="text-gray-300 text-sm leading-relaxed">
+Backed by an Associate's Degree in Information Technology from the University of Belize, professional front-end development experience at DealerSpike, and a formal Graphic Design certification, Randy Tzib brings high-end technical standards straight to local businesses in Cayo and across Belize.
+</p>
+<p class="text-gray-400 text-sm leading-relaxed">
+From building high-converting e-commerce stores with local bank card integrations to handling on-site IT infrastructure, Elevize is your trusted local partner.
+</p>
 </div>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="py-20 bg-black relative" style="background-image: url('https://readdy.ai/api/search-image?query=Abstract%20digital%20background%20with%20purple%20gradient%20and%20geometric%20elements%2C%20futuristic%20technology%20theme%20with%20subtle%20hexagonal%20patterns%2C%20dark%20mode%20design%20with%20purple%20accent%20colors%2C%20professional%20and%20modern%20aesthetic&width=1920&height=600&seq=8&orientation=landscape'); background-size: cover; background-position: center;">
-<div class="absolute inset-0 bg-black bg-opacity-80"></div>
-<div class="container mx-auto px-6 relative z-10">
-<div class="max-w-3xl mx-auto text-center">
-<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Digital Presence?</h2>
-<p class="text-gray-300 mb-8">Let's work together to create a stunning digital experience that helps your business grow.</p>
-<button class="bg-gradient-to-r from-primary to-purple-400 text-white px-8 py-4 !rounded-button text-lg whitespace-nowrap">Get Started Today</button>
+
+<!-- Portfolio Section (Live Client Work) -->
+<section id="portfolio" class="py-20 bg-gray-950">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-primary uppercase tracking-widest text-xs font-bold">Proven Track Record</span>
+<h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Featured Client Projects</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Explore our live client projects featuring custom web development and secure e-commerce payment integration.</p>
+</div>
+
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<!-- Project 1: ODS Fashion -->
+<div class="portfolio-item relative rounded-xl overflow-hidden group border border-gray-800 shadow-xl">
+<img src="images/odsfashian-preview.jpg" alt="ODS Fashion E-Commerce" class="w-full h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-center bg-black bg-opacity-85 transition-opacity">
+<h3 class="text-2xl font-bold mb-2">ODS Fashion</h3>
+<p class="text-sm text-primary font-medium mb-2">E-Commerce & Atlantic Bank Payment Integration</p>
+<p class="text-xs text-gray-300 mb-6 max-w-xs">Built a full e-commerce shopping experience with secure online card processing through Atlantic Bank in Belize.</p>
+<a href="https://odsfashion.com/" target="_blank" rel="noopener noreferrer">
+<button class="bg-gradient-to-r from-primary to-purple-500 hover:opacity-95 text-white px-6 py-2.5 !rounded-button whitespace-nowrap font-medium flex items-center gap-2 shadow-lg shadow-primary/30 hover:scale-105 transition-all duration-300 group/btn">
+<span>Visit Live Site</span>
+<i class="ri-external-link-line transform transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1"></i>
+</button>
+</a>
+</div>
+</div>
+
+<!-- Project 2: Ujan Almasewal -->
+<div class="portfolio-item relative rounded-xl overflow-hidden group border border-gray-800 shadow-xl">
+<img src="images/ujanal-preview.jpg" alt="Ujan Almasewal Website" class="w-full h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+<div class="portfolio-overlay absolute inset-0 flex flex-col justify-center items-center p-6 text-center bg-black bg-opacity-85 transition-opacity">
+<h3 class="text-2xl font-bold mb-2">Ujan Almasewal</h3>
+<p class="text-sm text-primary font-medium mb-2">Custom Web Development</p>
+<p class="text-xs text-gray-300 mb-6 max-w-xs">Developed a custom, high-performance professional web platform with clean code and responsive layouts.</p>
+<a href="https://www.ujanalmasewal.com/" target="_blank" rel="noopener noreferrer">
+<button class="bg-gradient-to-r from-primary to-purple-500 hover:opacity-95 text-white px-6 py-2.5 !rounded-button whitespace-nowrap font-medium flex items-center gap-2 shadow-lg shadow-primary/30 hover:scale-105 transition-all duration-300 group/btn">
+<span>Visit Live Site</span>
+<i class="ri-external-link-line transform transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1"></i>
+</button>
+</a>
+</div>
+</div>
 </div>
 </div>
 </section>
+
+<!-- Process Section -->
+<section id="process" class="py-20 bg-black relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/15 via-black to-black pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <span class="text-primary uppercase tracking-widest text-xs font-bold">How We Work</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Our Process</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">We follow a proven methodology to ensure your project is delivered successfully.</p>
+    </div>
+
+    <!-- Process Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      
+      <!-- Step 1 -->
+      <div class="bg-gray-900/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2 shadow-xl">
+        <div class="relative mb-6">
+          <span class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-md z-10">01</span>
+          <div class="hexagon w-20 h-20 bg-gradient-to-br from-primary/40 to-purple-950 flex items-center justify-center filter drop-shadow-[0_0_15px_rgba(151,71,255,0.4)] group-hover:scale-110 transition-transform duration-300">
+            <i class="ri-search-line ri-2x text-primary group-hover:text-white transition-colors duration-300"></i>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Discovery</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We learn about your business, goals, and vision to create a strategic plan.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-gray-900/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2 shadow-xl">
+        <div class="relative mb-6">
+          <span class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-md z-10">02</span>
+          <div class="hexagon w-20 h-20 bg-gradient-to-br from-primary/40 to-purple-950 flex items-center justify-center filter drop-shadow-[0_0_15px_rgba(151,71,255,0.4)] group-hover:scale-110 transition-transform duration-300">
+            <i class="ri-pencil-ruler-line ri-2x text-primary group-hover:text-white transition-colors duration-300"></i>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Design</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We create wireframes and visual designs that align with your brand identity.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-gray-900/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2 shadow-xl">
+        <div class="relative mb-6">
+          <span class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-md z-10">03</span>
+          <div class="hexagon w-20 h-20 bg-gradient-to-br from-primary/40 to-purple-950 flex items-center justify-center filter drop-shadow-[0_0_15px_rgba(151,71,255,0.4)] group-hover:scale-110 transition-transform duration-300">
+            <i class="ri-code-box-line ri-2x text-primary group-hover:text-white transition-colors duration-300"></i>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Development</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We build your solution using the latest technologies and best practices.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-gray-900/60 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-2 shadow-xl">
+        <div class="relative mb-6">
+          <span class="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-md z-10">04</span>
+          <div class="hexagon w-20 h-20 bg-gradient-to-br from-primary/40 to-purple-950 flex items-center justify-center filter drop-shadow-[0_0_15px_rgba(151,71,255,0.4)] group-hover:scale-110 transition-transform duration-300">
+            <i class="ri-rocket-line ri-2x text-primary group-hover:text-white transition-colors duration-300"></i>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-white">Delivery</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We launch your project and provide ongoing support to ensure success.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Trust / Highlights Banner -->
+<section class="py-12 bg-gray-950 border-y border-gray-900">
+  <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div>
+      <h4 class="text-primary font-bold text-xl">100% Secure</h4>
+      <p class="text-gray-400 text-xs mt-1">Atlantic Bank Card Integration</p>
+    </div>
+    <div>
+      <h4 class="text-primary font-bold text-xl">Local Support</h4>
+      <p class="text-gray-400 text-xs mt-1">Based in Cayo & Serving All Belize</p>
+    </div>
+    <div>
+      <h4 class="text-primary font-bold text-xl">Certified Pro</h4>
+      <p class="text-gray-400 text-xs mt-1">Degree in IT & Graphic Design</p>
+    </div>
+    <div>
+      <h4 class="text-primary font-bold text-xl">Fast Turnaround</h4>
+      <p class="text-gray-400 text-xs mt-1">Custom Built & Fully Responsive</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-black relative">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-primary uppercase tracking-widest text-xs font-bold">Get In Touch</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Start Your Project Today</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Ready to elevate your digital presence or need on-site tech support? Contact us today.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-2xl" id="contact-container">
+        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+        <form id="contact-form" action="https://formspree.io/f/mwpoggwj" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="name" class="block text-gray-400 mb-2 text-sm">Full Name *</label>
+              <input type="text" id="name" name="name" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-400 mb-2 text-sm">Email Address *</label>
+              <input type="email" id="email" name="email" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="Your email" required>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="phone" class="block text-gray-400 mb-2 text-sm">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="+(501) 600-0000">
+            </div>
+            <div>
+              <label for="service" class="block text-gray-400 mb-2 text-sm">Service Needed *</label>
+              <select id="service" name="service" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="Website Development">Website Development & E-Commerce</option>
+                <option value="Web Support">Web Support & Maintenance</option>
+                <option value="Graphic Design">Graphic Design & Branding</option>
+                <option value="IT & Tech Services">PC Repair / Networking / Security Cameras</option>
+                <option value="Other">Other Inquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-gray-400 mb-2 text-sm">Message *</label>
+            <textarea id="message" name="message" rows="5" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg resize-none focus:border-primary focus:outline-none" placeholder="Tell us about your project or tech issue..." required></textarea>
+          </div>
+          <div class="flex items-center mb-6">
+            <input type="checkbox" id="consent" name="consent" class="custom-checkbox mr-3" required>
+            <label for="consent" class="text-gray-400 text-xs">I agree to the processing of my personal data in accordance with the Privacy Policy</label>
+          </div>
+
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button type="submit" class="bg-gradient-to-r from-primary to-purple-500 hover:opacity-95 text-white px-8 py-3.5 !rounded-button whitespace-nowrap font-semibold shadow-xl shadow-primary/30 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto inline-flex items-center justify-center gap-2 group">
+            <span>Send Message</span>
+            <i class="ri-send-plane-fill transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+          </button>
+        </form>
+
+        <!-- Hidden Thank You Message -->
+        <div id="thank-you-message" class="hidden text-center mt-6">
+          <div class="hexagon bg-primary w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30">
+            <i class="ri-mail-send-line ri-xl text-white"></i>
+          </div>
+          <h4 class="text-2xl font-bold mb-2">Thank You!</h4>
+          <p class="text-gray-400">Your message has been sent. We’ll get back to you soon.</p>
+        </div>
+      </div>
+      <!-- Contact Information -->
+      <div>
+        <div class="bg-gray-900 p-8 rounded-2xl mb-8 border border-gray-800 shadow-2xl">
+          <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center mr-4 bg-primary/10 rounded-lg">
+                <i class="ri-map-pin-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Address</h4>
+                <p class="text-gray-400 text-sm">San Antonio Village, Cayo District, Belize</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center mr-4 bg-primary/10 rounded-lg">
+                <i class="ri-mail-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Email</h4>
+                <p class="text-gray-400 text-sm">elevizebze@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center mr-4 bg-primary/10 rounded-lg">
+                <i class="ri-phone-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Phone</h4>
+                <p class="text-gray-400 text-sm">+(501) 615-8929</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center mr-4 bg-primary/10 rounded-lg">
+                <i class="ri-time-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Working Hours</h4>
+                <p class="text-gray-400 text-sm">Monday - Friday: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h4 class="font-bold mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-black hover:bg-primary rounded-full transition-colors duration-300 border border-gray-800 shadow">
+                <i class="ri-facebook-fill ri-lg text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-black hover:bg-primary rounded-full transition-colors duration-300 border border-gray-800 shadow">
+                <i class="ri-twitter-x-fill ri-lg text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-black hover:bg-primary rounded-full transition-colors duration-300 border border-gray-800 shadow">
+                <i class="ri-instagram-fill ri-lg text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 flex items-center justify-center bg-black hover:bg-primary rounded-full transition-colors duration-300 border border-gray-800 shadow">
+                <i class="ri-linkedin-fill ri-lg text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Map -->
+        <div class="bg-black rounded-2xl overflow-hidden h-64 border border-gray-800 shadow-2xl">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d566.9377826010805!2d-89.02336867449124!3d17.078150182377694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5e68b67cf3692d%3A0x17adaa3eb6906146!2sSan%20Antonio%20Community%20Center!5e0!3m2!1sen!2sbz!4v1748536013524!5m2!1sen!2sbz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
-<footer class="bg-black pt-16 pb-8">
+<footer class="bg-black pt-16 pb-8 border-t border-gray-900">
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
 <!-- Company Info -->
 <div>
 <div class="flex items-center mb-6">
-<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3 shadow-md shadow-primary/30">
 <i class="ri-rocket-line ri-lg text-white"></i>
 </div>
 <span class="text-2xl font-bold">Elevize</span>
 </div>
-<p class="text-gray-400 mb-6">Elevating your digital presence with custom web solutions and design services.</p>
+<p class="text-gray-400 mb-6 text-sm">Elevating your digital presence and technical infrastructure with professional solutions.</p>
 <div class="flex space-x-4">
 <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors duration-300">
 <i class="ri-facebook-fill text-white"></i>
@@ -466,7 +493,7 @@
 <!-- Quick Links -->
 <div>
 <h4 class="text-lg font-bold mb-6">Quick Links</h4>
-<ul class="space-y-3">
+<ul class="space-y-3 text-sm">
 <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
 <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Services</a></li>
 <li><a href="#portfolio" class="text-gray-400 hover:text-primary transition-colors duration-300">Portfolio</a></li>
@@ -474,34 +501,33 @@
 <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
 </ul>
 </div>
-<!-- Services -->
+<!-- Services (Updated to link to tech-service.html) -->
 <div>
 <h4 class="text-lg font-bold mb-6">Services</h4>
-<ul class="space-y-3">
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Website Development</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Web Support & Maintenance</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Graphic Design</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">UI/UX Design</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Brand Identity</a></li>
-</ul>
+<ul class="space-y-3 text-sm">
+          <li><a href="website-development.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Website Development</a></li>
+          <li><a href="web-support.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Web Support & Maintenance</a></li>
+          <li><a href="graphic-design.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Graphic Design</a></li>
+          <li><a href="tech-service.html" class="text-gray-400 hover:text-primary transition-colors duration-300">PC Repair & Networking</a></li>
+        </ul>
 </div>
 <!-- Newsletter -->
 <div>
 <h4 class="text-lg font-bold mb-6">Subscribe</h4>
-<p class="text-gray-400 mb-6">Stay updated with our latest news and offers.</p>
+<p class="text-gray-400 mb-6 text-sm">Stay updated with our latest news and offers.</p>
 <form class="mb-4">
 <div class="flex">
-<input type="email" placeholder="Your email" class="flex-grow bg-gray-900 border-none text-white p-3 rounded-l">
-<button type="submit" class="bg-primary text-white px-4 py-3 rounded-r whitespace-nowrap">Subscribe</button>
+<input type="email" placeholder="Your email" class="flex-grow bg-gray-900 border-none text-white p-3 rounded-l text-sm focus:outline-none">
+<button type="submit" class="bg-gradient-to-r from-primary to-purple-500 text-white px-4 py-3 rounded-r whitespace-nowrap text-sm font-medium hover:opacity-95 transition-opacity">Subscribe</button>
 </div>
 </form>
-<p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+<p class="text-gray-500 text-xs">By subscribing, you agree to our Privacy Policy.</p>
 </div>
 </div>
 <div class="border-t border-gray-800 pt-8">
 <div class="flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-500 mb-4 md:mb-0">© 2025 Elevize. All rights reserved.</p>
-<div class="flex space-x-6">
+<p class="text-gray-500 mb-4 md:mb-0 text-sm">© 2025 Elevize. All rights reserved.</p>
+<div class="flex space-x-6 text-sm">
 <a href="#" class="text-gray-500 hover:text-primary transition-colors duration-300">Privacy Policy</a>
 <a href="#" class="text-gray-500 hover:text-primary transition-colors duration-300">Terms of Service</a>
 <a href="#" class="text-gray-500 hover:text-primary transition-colors duration-300">Sitemap</a>
@@ -510,8 +536,9 @@
 </div>
 </div>
 </footer>
+
 <script src="script.js"></script>
-  <script>
+<script>
   const form = document.getElementById('contact-form');
   const thankYou = document.getElementById('thank-you-message');
 
@@ -540,5 +567,4 @@
   });
 </script>
 </body>
-
 </html>

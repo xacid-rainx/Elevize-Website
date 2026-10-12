@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT & Tech Services - Elevize</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#9747FF', secondary: '#000000' },
+          borderRadius: {
+            'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px',
+            'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px',
+            'full': '9999px', 'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white selection:bg-primary selection:text-white">
+
+<!-- Header -->
+<header class="fixed w-full bg-black bg-opacity-95 z-50 border-b border-gray-900">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3 shadow-lg shadow-primary/30">
+          <i class="ri-rocket-line ri-lg text-white"></i>
+        </div>
+        <span class="text-2xl font-bold tracking-tight">Elevize</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="index.html#home" class="text-white hover:text-primary transition-colors duration-300">Home</a>
+        <a href="index.html#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
+        <a href="index.html#portfolio" class="text-white hover:text-primary transition-colors duration-300">Portfolio</a>
+        <a href="about-us.html" class="text-white hover:text-primary transition-colors duration-300">About</a>
+        <a href="index.html#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
+        <a href="index.html#contact" class="bg-gradient-to-r from-primary to-purple-400 text-white px-6 py-2.5 !rounded-button whitespace-nowrap font-medium shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-300">Get Started</a>
+      </nav>
+      <div class="md:hidden w-8 h-8 flex items-center justify-center">
+        <i class="ri-menu-line ri-2x text-white"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Adobe Stock Background -->
+<section class="pt-40 pb-28 relative overflow-hidden flex items-center" style="background-image: url('https://t3.ftcdn.net/jpg/03/28/92/44/240_F_328924418_SRVFopVgrD3qh7qSYdTl7r7YYoWdILNa.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+  <div class="container mx-auto px-6 relative z-10 text-center max-w-3xl">
+    <span class="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-xs font-semibold mb-4 tracking-wider uppercase border border-primary/30">On-Site & Hardware Solutions</span>
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">IT & Tech <span class="text-primary glow">Services</span></h1>
+    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+      From troubleshooting computer hardware issues to installing commercial security camera systems and custom network cabling across Cayo and Belize.
+    </p>
+    <a href="index.html#contact" class="bg-gradient-to-r from-primary to-purple-500 text-white px-8 py-3.5 !rounded-button font-semibold shadow-xl shadow-primary/30 hover:scale-105 transition-all duration-300 inline-flex items-center gap-2">
+      <span>Book an On-Site Visit</span>
+      <i class="ri-arrow-right-line"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Services Breakdown Grid -->
+<section class="py-20 bg-gray-950">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-primary uppercase tracking-widest text-xs font-bold">Comprehensive Capabilities</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">What We Handle On-Site</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Reliable technical support and hardware installations designed to keep your business or home secure and operational.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      
+      <!-- Service 1: PC Repair & Diagnostics -->
+      <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 shadow-xl group">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+          <i class="ri-computer-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">PC Repair & Custom Builds</h3>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Comprehensive hardware diagnostics, component replacements (RAM, SSDs, Power Supplies), malware removal, operating system reinstallations, and custom workstation setups.
+        </p>
+        <ul class="space-y-2 text-xs text-gray-300">
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Hardware & Software Diagnostics</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> SSD Speed Upgrades & Data Recovery</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Custom Desktop Computer Assembly</li>
+        </ul>
+      </div>
+
+      <!-- Service 2: Security Camera Systems -->
+      <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 shadow-xl group">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+          <i class="ri-vidicon-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Security Camera Setup</h3>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Professional residential and commercial CCTV & IP camera system design and mounting. Keep your home or retail storefront secure with remote mobile phone monitoring.
+        </p>
+        <ul class="space-y-2 text-xs text-gray-300">
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Indoor & Outdoor Camera Mounting</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> DVR/NVR Configuration & Storage</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Remote Access via Smartphone Apps</li>
+        </ul>
+      </div>
+
+      <!-- Service 3: Custom Network Cabling -->
+      <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 shadow-xl group">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+          <i class="ri-router-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Network Wiring & Crimping</h3>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Reliable high-speed Ethernet infrastructure for offices and homes. We cut, run, patch, and crimp Cat5e/Cat6 networking cables for clean, zero-lag connections.
+        </p>
+        <ul class="space-y-2 text-xs text-gray-300">
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Ethernet Cable Crimping & Testing</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Wi-Fi Router & Extender Setup</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Office Network Switch Configuration</li>
+        </ul>
+      </div>
+
+      <!-- Service 4: On-Site Tech Support -->
+      <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-primary/50 transition-all duration-300 shadow-xl group">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+          <i class="ri-tools-line ri-2x text-primary"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">On-Site Technical Support</h3>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Need a technician at your store, farm, or office? We provide fast, reliable on-site IT consultations and emergency troubleshooting throughout the local area.
+        </p>
+        <ul class="space-y-2 text-xs text-gray-300">
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Printer & POS Device Integration</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Business Network Diagnostics</li>
+          <li class="flex items-center gap-2"><i class="ri-check-line text-primary"></i> Scheduled Preventative Maintenance</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section matching website-development.html style -->
+<section class="py-16 bg-black relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 left-10 text-primary text-opacity-20 text-4xl">&lt;div&gt;</div>
+    <div class="absolute top-40 right-20 text-primary text-opacity-20 text-3xl">&lt;/&gt;</div>
+    <div class="absolute bottom-20 left-1/4 text-primary text-opacity-20 text-5xl">{ }</div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 glow">
+        Need Technical Support or an On-Site Setup?
+      </h2>
+
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+        Contact Elevize today to schedule your computer repair, camera installation, or network cabling service.
+      </p>
+
+      <a href="index.html#contact" class="inline-block">
+        <button class="bg-gradient-to-r from-primary to-purple-400 text-white px-8 py-3 !rounded-button flex items-center gap-2 whitespace-nowrap transition-all font-semibold shadow-xl shadow-primary/30 hover:scale-105">
+          <span>Get In Touch</span>
+          <i class="ri-arrow-right-line"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black pt-16 pb-8 border-t border-gray-900">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div>
+        <div class="flex items-center mb-6">
+          <div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3">
+            <i class="ri-rocket-line ri-lg text-white"></i>
+          </div>
+          <span class="text-2xl font-bold">Elevize</span>
+        </div>
+        <p class="text-gray-400 mb-6 text-sm">Elevating your digital presence and technical infrastructure with professional solutions.</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="index.html#home" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+          <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Services</a></li>
+          <li><a href="index.html#portfolio" class="text-gray-400 hover:text-primary transition-colors duration-300">Portfolio</a></li>
+          <li><a href="index.html#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Services</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="website-development.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Website Development</a></li>
+          <li><a href="web-support.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Web Support & Maintenance</a></li>
+          <li><a href="graphic-design.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Graphic Design</a></li>
+          <li><a href="tech-service.html" class="text-gray-400 hover:text-primary transition-colors duration-300">PC Repair & Networking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold mb-6">Contact</h4>
+        <p class="text-gray-400 mb-2 text-sm">San Antonio Village, Cayo, Belize</p>
+        <p class="text-gray-400 text-sm">+(501) 615-8929</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+      © 2025 Elevize. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
