@@ -351,6 +351,7 @@
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
   <div>
     <label for="phone" class="block text-gray-400 mb-2 text-sm">Phone / WhatsApp</label>
     <input type="tel" id="phone" name="phone" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none" placeholder="+(501) 600-0000">
@@ -372,10 +373,29 @@
 <div id="package-container" class="mb-6 hidden">
   <label for="package" class="block text-gray-400 mb-2 text-sm">Select Package Tier *</label>
   <select id="package" name="package_tier" class="w-full bg-black border border-gray-800 text-white p-3 rounded-lg focus:border-primary focus:outline-none">
-    <option value="" disabled selected>Select a Web Package</option>
-    <option value="Starter Plan ($650 BZD)">Starter Plan - Single Page / Landing ($650 BZD)</option>
-    <option value="Business Plan (Starting $1,350 BZD)">Business Plan - Multi-Page Site (Starting $1,350 BZD)</option>
-    <option value="E-Commerce / Custom (Starting $2,500 BZD)">E-Commerce / Custom Portals (Starting $2,500 BZD)</option>
+    <option value="" disabled selected>Select a Package / Retainer</option>
+    
+    <!-- 1. Website Development Options -->
+    <optgroup label="Website Development Packages" id="optgroup-web" class="hidden">
+      <option value="Starter Plan ($650 BZD)">Starter Plan - Single Page / Landing ($650 BZD)</option>
+      <option value="Business Plan (Starting $1,350 BZD)">Business Plan - Multi-Page Site (Starting $1,350 BZD)</option>
+      <option value="E-Commerce / Custom (Starting $2,500 BZD)">E-Commerce / Custom Portals (Starting $2,500 BZD)</option>
+    </optgroup>
+
+    <!-- 2. Web Support Options -->
+    <optgroup label="Web Support & Maintenance Packages" id="optgroup-support" class="hidden">
+      <option value="Essential Care ($49 BZD/mo)">Essential Care - Monthly Retainer ($49 BZD/mo)</option>
+      <option value="Pro Business Care ($99 BZD/mo)">Pro Business Care - Monthly Retainer ($99 BZD/mo)</option>
+      <option value="Site Refresh & Tune-Up">Site Refresh & Tune-Up - One-Time</option>
+      <option value="Prepaid Task Block ($150 BZD)">Prepaid Task Block (5 Hours - $150 BZD)</option>
+    </optgroup>
+
+    <!-- 3. Graphic Design Options -->
+    <optgroup label="Graphic Design & Branding Packages" id="optgroup-design" class="hidden">
+      <option value="Logo Starter ($175 BZD)">Logo & Identity Starter ($175 BZD)</option>
+      <option value="Brand & Social Suite ($350 BZD)">Brand & Social Suite ($350 BZD)</option>
+      <option value="Custom Graphic Retainer">Custom Graphic Retainer / Quote</option>
+    </optgroup>
   </select>
 </div>
           <div class="mb-6">
@@ -549,74 +569,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-  const form = document.getElementById('contact-form');
-  const thankYou = document.getElementById('thank-you-message');
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const action = form.getAttribute('action');
-
-    try {
-      const response = await fetch(action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.style.display = 'none';
-        thankYou.classList.remove('hidden');
-      } else {
-        alert('Oops! There was a problem submitting your form.');
-      }
-    } catch (error) {
-      alert('Oops! Something went wrong.');
-    }
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-  const serviceSelect = document.getElementById('service');
-  const packageContainer = document.getElementById('package-container');
-  const packageSelect = document.getElementById('package');
-
-  function handlePackageVisibility() {
-    if (serviceSelect.value === 'Website Development') {
-      packageContainer.classList.remove('hidden');
-      packageSelect.setAttribute('required', 'required');
-    } else {
-      packageContainer.classList.add('hidden');
-      packageSelect.removeAttribute('required');
-      packageSelect.value = ''; // Reset selection when hidden
-    }
-  }
-
-  if (serviceSelect) {
-    // 1. Listen for manual changes in the dropdown
-    serviceSelect.addEventListener('change', handlePackageVisibility);
-
-    // 2. Check URL parameters coming from other pages (e.g. ?service=Website+Development&package=Starter)
-    const urlParams = new URLSearchParams(window.location.search);
-    const serviceParam = urlParams.get('service');
-    const packageParam = urlParams.get('package');
-
-    if (serviceParam) {
-      serviceSelect.value = serviceParam;
-      handlePackageVisibility(); // Trigger check to show package dropdown
-    }
-
-    if (packageParam && packageSelect) {
-      for (let option of packageSelect.options) {
-        if (option.value.toLowerCase().includes(packageParam.toLowerCase())) {
-          packageSelect.value = option.value;
-          break;
-        }
-      }
-    }
-  }
-});
-</script>
 </body>
 </html>
