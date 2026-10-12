@@ -29,33 +29,55 @@
 </head>
 <body class="bg-black text-white selection:bg-primary selection:text-white">
 <!-- Header -->
-<header class="fixed w-full bg-black bg-opacity-95 z-50 border-b border-gray-900">
-<div class="container mx-auto px-6 py-4">
-<div class="flex justify-between items-center">
-<div class="flex items-center">
-<div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3 shadow-lg shadow-primary/30">
-<i class="ri-rocket-line ri-lg text-white"></i>
-</div>
-<span class="text-2xl font-bold tracking-tight">Elevize</span>
-</div>
-<nav class="hidden md:flex space-x-8 items-center">
-<a href="#home" class="text-white hover:text-primary transition-colors duration-300">Home</a>
-<a href="#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
-<a href="#portfolio" class="text-white hover:text-primary transition-colors duration-300">Portfolio</a>
-<a href="about-us.html" class="text-white hover:text-primary transition-colors duration-300">About</a>
-<a href="#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
-<a href="#contact" class="bg-gradient-to-r from-primary to-purple-500 text-white px-6 py-2.5 !rounded-button whitespace-nowrap font-medium shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
-<span>Get Started</span>
-<i class="ri-arrow-right-line transform transition-transform duration-300 group-hover:translate-x-1.5"></i>
-</a>
-</nav>
-<div class="md:hidden w-8 h-8 flex items-center justify-center">
-<i class="ri-menu-line ri-2x text-white"></i>
-</div>
-</div>
-</div>
-</header>
+<!-- Header -->
+<header class="fixed w-full bg-black/95 backdrop-blur-md z-50 border-b border-gray-900">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      
+      <!-- Logo -->
+      <a href="#home" class="flex items-center">
+        <div class="hexagon bg-primary w-10 h-10 flex items-center justify-center mr-3 shadow-lg shadow-primary/30">
+          <i class="ri-rocket-line ri-lg text-white"></i>
+        </div>
+        <span class="text-2xl font-bold tracking-tight">Elevize</span>
+      </a>
 
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#home" class="text-white hover:text-primary transition-colors duration-300">Home</a>
+        <a href="#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
+        <a href="#portfolio" class="text-white hover:text-primary transition-colors duration-300">Portfolio</a>
+        <a href="about-us.html" class="text-white hover:text-primary transition-colors duration-300">About</a>
+        <a href="#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
+        <a href="#contact" class="bg-gradient-to-r from-primary to-purple-500 text-white px-6 py-2.5 !rounded-button whitespace-nowrap font-medium shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all duration-300 flex items-center gap-2 group">
+          <span>Get Started</span>
+          <i class="ri-arrow-right-line transform transition-transform duration-300 group-hover:translate-x-1.5"></i>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle navigation" class="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-gray-900 transition-colors">
+        <i id="menu-icon" class="ri-menu-line ri-2x"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-900 px-6 pt-4 pb-6 transition-all duration-300 ease-in-out">
+    <nav class="flex flex-col space-y-4 text-center">
+      <a href="#home" class="mobile-nav-link text-gray-200 hover:text-primary font-medium py-2 transition-colors">Home</a>
+      <a href="#services" class="mobile-nav-link text-gray-200 hover:text-primary font-medium py-2 transition-colors">Services</a>
+      <a href="#portfolio" class="mobile-nav-link text-gray-200 hover:text-primary font-medium py-2 transition-colors">Portfolio</a>
+      <a href="about-us.html" class="mobile-nav-link text-gray-200 hover:text-primary font-medium py-2 transition-colors">About</a>
+      <a href="#contact" class="mobile-nav-link text-gray-200 hover:text-primary font-medium py-2 transition-colors">Contact</a>
+      <a href="#contact" class="mobile-nav-link bg-gradient-to-r from-primary to-purple-500 text-white py-3 px-6 !rounded-button font-medium shadow-lg shadow-primary/25 inline-flex items-center justify-center gap-2 mt-2">
+        <span>Get Started</span>
+        <i class="ri-arrow-right-line"></i>
+      </a>
+    </nav>
+  </div>
+</header>
 <!-- Hero Section -->
 <section id="home" class="min-h-screen relative overflow-hidden flex items-center" style="background-image: url('https://readdy.ai/api/search-image?query=A%20modern%20digital%20workspace%20with%20abstract%20purple%20and%20dark%20elements%2C%20futuristic%20technology%20theme%20with%20subtle%20geometric%20shapes%20floating%20in%20space%2C%20gradient%20purple%20to%20black%20background%2C%20minimalist%20design%20aesthetic%2C%20professional%20and%20elegant%20atmosphere&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-black bg-opacity-75"></div>
